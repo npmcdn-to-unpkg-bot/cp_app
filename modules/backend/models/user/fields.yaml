@@ -46,6 +46,22 @@ tabs:
             span: right
             label: backend::lang.user.password_confirmation
 
+        profession:
+           label: Professione
+           span: auto
+
+        position:
+           label: Posizione
+           span: auto
+
+        company:
+           label: Azienda
+           span: auto
+
+        bio:
+          label: Bio
+          span: auto
+
         groups:
             context: [create, update]
             label: backend::lang.user.groups
