@@ -4,9 +4,9 @@
 
 fields:
     owner:
-        label: Nome
+        label: Collaboratore
         type: relation
-        nameFrom: last_name
+        nameFrom: iu_tag_name
 
     incarico:
         label: Incarico

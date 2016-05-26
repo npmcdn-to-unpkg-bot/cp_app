@@ -27,17 +27,13 @@ class Opportunity extends Model
         'services' => ['Acme\Crm\Models\Service'],
         'costs' => ['Acme\Crm\Models\Cost'],
         'invoices' => ['Acme\Crm\Models\Invoice'],
+        'contacts' => ['Acme\Crm\Models\Contact'],
     ];
 
     public $belongsTo = [
         'status' => ['Acme\Crm\Models\Status'],
     ];
 
-    public $belongsToMany = [
-        'contacts' => [
-            'Acme\Crm\Models\Contact',
-            'table' => 'acme_crm_opportunities_contacts'
-        ],
-    ];
+    public $belongsToMany = [];
 
 }

@@ -46,6 +46,19 @@ class Plugin extends PluginBase
                 'iu_skype',
                 'iu_linkedin',
                 'iu_comment',
+                'iu_mobile',
+                'iu_fax',
+                'iu_cpf',
+                'iu_cnpj',
+                'iu_position',
+                'iu_country',
+                'iu_state',
+                'iu_city',
+                'iu_address',
+                'iu_zipcode',
+                'iu_zipcode',
+                'iu_zipcode'
+
             ]);
         });
       
@@ -169,7 +182,12 @@ class Plugin extends PluginBase
                     'label' => 'indikator.user::lang.internet.icq',
                     'tab'   => 'indikator.user::lang.internet.tab',
                     'span'  => 'auto'
-                ]
+                ],
+                'iu_tag_name' => [
+                'label' => 'Nome per la ricerca (p.e.: Alessandro-Atemporale)',
+                'tab'   => 'indikator.user::lang.personal.tab',
+                'span'  => 'auto'
+            ]
             ]);
 
             $form->addSecondaryTabFields([

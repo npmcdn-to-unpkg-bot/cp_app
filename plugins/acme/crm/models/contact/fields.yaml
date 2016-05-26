@@ -3,63 +3,11 @@
 # ===================================
 
 fields:
-    first_name:
-        label: Nome
-        span: auto
+    owner:
+        label: Cliente
+        type: relation
+        nameFrom: iu_tag_name
 
-    last_name:
-        label: Cognome
-        span: auto
-
-    cpf:
-        label: CPF
-        span: auto
-
-    email:
-        label: Email
-        span: auto
-
-    phone:
-        label: Telefono
-        span: auto
-
-    mobile:
-        label: Cellulare
-        span: auto
-
-    fax:
-        label: Fax
-        span: auto
-
-    position:
-        label: Posizione
-        span: auto
-
-    company:
-        label: Azienda
-        span: auto
-
-    country:
-        label: Nazione
-        span: auto
-
-    state:
-        label: Stato
-        span: auto
-
-    city:
-        label: Città
-        span: auto
-
-    address:
-        label: Indirizzo
-        span: auto
-
-    zipcode:
-        label: Zipcode
-        span: auto
-
-    cnpj:
-        label: CNPJ
-        span: auto
-
+    note:
+        label: Annotazioni
+        type: richeditor

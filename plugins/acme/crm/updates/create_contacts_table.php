@@ -12,21 +12,9 @@ class CreateContactsTable extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('cpf')->nullable();
-            $table->string('email')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('fax')->nullable();
-            $table->string('mobile')->nullable();
-            $table->string('position')->nullable();
-            $table->string('company')->nullable();
-            $table->string('country')->nullable();
-            $table->string('state')->nullable();
-            $table->string('city')->nullable();
-            $table->string('address')->nullable();
-            $table->string('zipcode')->nullable();
-            $table->string('cnpj')->nullable();
+            $table->text('note')->nullable();
+            $table->integer('opportunity_id')->unsigned()->nullable()->index();
+            $table->integer('owner_id')->unsigned()->nullable()->index();
             $table->timestamps();
         });
     }

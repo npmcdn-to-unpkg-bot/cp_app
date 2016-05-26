@@ -23,7 +23,10 @@ class Contact extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'opportunity' => ['Acme\Crm\Models\Opportunity'],
+        'owner' => ['RainLab\User\Models\User'],
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

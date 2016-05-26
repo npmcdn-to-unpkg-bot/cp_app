@@ -3,18 +3,20 @@
 # ===================================
 
 columns:
-    first_name:
+    full_name:
         label: Nome
-        searchable: true
-
-    last_name:
-        label: Cognome
-        searchable: true
+        relation: owner
+        select: concat(name, ' ', surname)
 
     company:
         label: Azienda
-        searchable: true
+        relation: owner
+        select: iu_company
 
     position:
         label: Posizione
-        searchable: true
+        relation: owner
+        select: iu_position
+
+    note:
+        label: Annotazioni

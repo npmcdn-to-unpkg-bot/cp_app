@@ -24,6 +24,10 @@ class User extends UserBase
         'password_confirmation' => 'required_with:password|between:4,255'
     ];
 
+    public $hasMany = [
+        'opportunities' => ['Acme\Crm\Models\Opportunity'],
+    ];
+
     /**
      * @var array Relations
      */

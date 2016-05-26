@@ -22,7 +22,7 @@ contacts:
     label: Contatti
     view:
         list: $/acme/crm/models/contact/columns.yaml
-        toolbarButtons: create|add|remove
+        toolbarButtons: create|delete
     manage:
         showSearch: true
         recordsPerPage: 10

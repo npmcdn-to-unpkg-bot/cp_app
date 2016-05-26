@@ -11,6 +11,7 @@ class AddProfileFieldsToUsersTable extends Migration
         {
             $table->string('iu_first_name', 100)->nullable();
             $table->string('iu_last_name', 100)->nullable();
+            $table->string('iu_tag_name', 100)->nullable();
             $table->string('iu_gender', 7)->nullable();
             $table->string('iu_job', 100)->nullable();
             $table->string('iu_about')->nullable();
