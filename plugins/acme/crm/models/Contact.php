@@ -25,7 +25,7 @@ class Contact extends Model
     public $hasMany = [];
     public $belongsTo = [
         'opportunity' => ['Acme\Crm\Models\Opportunity'],
-        'owner' => ['RainLab\User\Models\User'],
+        'user' => ['RainLab\User\Models\User'],
     ];
     public $belongsToMany = [];
     public $morphTo = [];

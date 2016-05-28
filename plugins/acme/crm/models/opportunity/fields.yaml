@@ -8,6 +8,29 @@ tabs:
         name:
             label: Titolo
             comment: Definisci un titolo per la nuova opportunità.
+            span: left
+
+        status:
+            label: Status
+            type: recordfinder
+            list: $/acme/crm/models/status/columns.yaml
+            prompt: Clicca sul %s bottone per trovare lo status
+            nameFrom: name
+            descriptionFrom: probability
+            span: right
+
+
+        starting:
+            label: Data di inizio del progetto
+            type: datepicker
+            mode: date
+            span: left
+
+        finishing:
+            label: Data prevista di conclusione
+            type: datepicker
+            mode: date
+            span: right
 
         description:
             label: Descrizione
@@ -19,13 +42,7 @@ tabs:
         #     label: Status
         #     type: relation
 
-        status:
-            label: Status
-            type: recordfinder
-            list: $/acme/crm/models/status/columns.yaml
-            prompt: Clicca sul %s bottone per trovare lo status
-            nameFrom: name
-            descriptionFrom: probability
+
 
         notes:
             label: Note

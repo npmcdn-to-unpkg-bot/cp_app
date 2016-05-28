@@ -24,15 +24,15 @@ class User extends UserBase
         'password_confirmation' => 'required_with:password|between:4,255'
     ];
 
-    public $hasMany = [
-        'opportunities' => ['Acme\Crm\Models\Opportunity'],
-    ];
-
     /**
      * @var array Relations
      */
     public $belongsToMany = [
         'groups' => ['RainLab\User\Models\UserGroup', 'table' => 'users_groups']
+    ];
+
+    public $hasOne = [
+        'opportunity' => ['Acme\Crm\Models\Contact', 'table' => 'acme_crm_opportunities']
     ];
 
     public $attachOne = [

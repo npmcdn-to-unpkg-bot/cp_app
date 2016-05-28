@@ -12,6 +12,10 @@ columns:
         label: Oggetto
         searchable: true
 
+    content:
+        label: Messaggio
+        searchable: true
+
     owner:
         width: 20%
         label: Referente

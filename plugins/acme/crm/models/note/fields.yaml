@@ -8,7 +8,7 @@ fields:
 
     content:
         label: Contenuto
-        type: richeditor
+        size: huge
 
     owner:
         label: Per conto di

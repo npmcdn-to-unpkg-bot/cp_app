@@ -81,21 +81,21 @@ class Plugin extends PluginBase
                 ],
                 'iu_telephone' => [
                     'label' => 'indikator.user::lang.personal.telephone',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'tab'   => 'Company',
                     'span'  => 'auto'
                 ],
                 'iu_mobile' => [
-                    'label' => 'mobile',
+                    'label' => 'Mobile',
                     'tab'   => 'indikator.user::lang.personal.tab',
                     'span'  => 'auto'
                 ],
                 'iu_fax' => [
-                    'label' => 'fax',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'Fax',
+                    'tab'   => 'Company',
                     'span'  => 'auto'
                 ],
                 'iu_cpf' => [
-                    'label' => 'cpf',
+                    'label' => 'CPF',
                     'tab'   => 'indikator.user::lang.personal.tab',
                     'span'  => 'auto'
                 ],
@@ -106,43 +106,43 @@ class Plugin extends PluginBase
                 ],
                 'iu_company' => [
                     'label' => 'indikator.user::lang.personal.company',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'tab'   => 'Company',
                     'span'  => 'auto'
                 ],
                 'iu_position' => [
-                    'label' => 'position',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'Position',
+                    'tab'   => 'Company',
                     'span'  => 'auto'
                 ],
                 'iu_country' => [
-                    'label' => 'country',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'Country',
+                    'tab'   => 'Address',
                     'span'  => 'auto'
                 ],
                 'iu_state' => [
-                    'label' => 'state',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'State',
+                    'tab'   => 'Address',
                     'span'  => 'auto'
                 ],
                 'iu_city' => [
-                    'label' => 'city',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'City',
+                    'tab'   => 'Address',
                     'span'  => 'auto'
                 ],
                 'iu_address' => [
-                    'label' => 'address',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'Address',
+                    'tab'   => 'Address',
                     'span'  => 'auto'
                 ],
                 'iu_zipcode' => [
-                    'label' => 'zipcode',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'Zipcode',
+                    'tab'   => 'Address',
                     'span'  => 'auto'
                 ],
 
                 'iu_cnpj' => [
-                    'label' => 'cnpj',
-                    'tab'   => 'indikator.user::lang.personal.tab',
+                    'label' => 'CNPJ',
+                    'tab'   => 'Company',
                     'span'  => 'auto'
                 ],
 
@@ -179,7 +179,7 @@ class Plugin extends PluginBase
                     'span'  => 'auto'
                 ],
                 'iu_linkedin' => [
-                    'label' => 'indikator.user::lang.internet.icq',
+                    'label' => 'Linkedin',
                     'tab'   => 'indikator.user::lang.internet.tab',
                     'span'  => 'auto'
                 ],

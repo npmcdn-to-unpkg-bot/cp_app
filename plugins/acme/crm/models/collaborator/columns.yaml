@@ -6,22 +6,22 @@ columns:
     full_name:
         label: Nome
         relation: owner
-        select: concat(name, ' ', surname)
+        select: concat(first_name, ' ', last_name)
 
     company:
         label: Azienda
         relation: owner
-        select: iu_company
+        select: company
 
     position:
         label: Posizione
         relation: owner
-        select: iu_position
+        select: position
 
     profession:
         label: Professione
         relation: owner
-        select: iu_job
+        select: profession
 
     incarico:
         label: Incarico

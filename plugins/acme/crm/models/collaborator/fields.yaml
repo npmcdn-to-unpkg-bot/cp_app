@@ -6,7 +6,7 @@ fields:
     owner:
         label: Collaboratore
         type: relation
-        nameFrom: iu_tag_name
+        nameFrom: tag_name
 
     incarico:
         label: Incarico

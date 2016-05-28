@@ -25,7 +25,7 @@ class Collaborator extends Model
     public $hasMany = [];
     public $belongsTo = [
         'opportunity' => ['Acme\Crm\Models\Opportunity'],
-        'owner' => ['RainLab\User\Models\User'],
+        'owner' => ['Backend\Models\User'],
     ];
     public $belongsToMany = [];
     public $morphTo = [];

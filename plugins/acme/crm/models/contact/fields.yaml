@@ -3,7 +3,7 @@
 # ===================================
 
 fields:
-    owner:
+    user:
         label: Cliente
         type: relation
         nameFrom: iu_tag_name

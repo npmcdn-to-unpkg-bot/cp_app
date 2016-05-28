@@ -14,7 +14,7 @@ class CreateContactsTable extends Migration
             $table->increments('id');
             $table->text('note')->nullable();
             $table->integer('opportunity_id')->unsigned()->nullable()->index();
-            $table->integer('owner_id')->unsigned()->nullable()->index();
+            $table->integer('user_id')->unsigned()->nullable()->index();
             $table->timestamps();
         });
     }

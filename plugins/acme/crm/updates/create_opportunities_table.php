@@ -20,20 +20,11 @@ class CreateOpportunitiesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('acme_crm_opportunities_contacts', function($table)
-        {
-            $table->engine = 'InnoDB';
-            $table->integer('opportunity_id')->unsigned();
-            $table->integer('contact_id')->unsigned();
-            $table->primary(['opportunity_id', 'contact_id'], 'opportunity_contact');
-        });
-
     }
 
     public function down()
     {
         Schema::dropIfExists('acme_crm_opportunities');
-        Schema::dropIfExists('acme_crm_opportunities_contacts');
     }
 
 }

@@ -38,9 +38,16 @@ section.section
     .section-row-container
         .section-row.three-quarters-padding-bottom
             .container
-                +content('private/logintitle')
+                ='{% if user %}'
+                h1.page-title.text-center
+                    | Benvenuto {{ user.name }} {{ user.surname }}
+                    small Questa è l'area clienti riservata a {{ user.iu_company }}.
+                ='{% else %}'
+                h1.page-title.text-center
+                    | Login
+                    small Utilizza le tue credenziali per accedere alla tua area riservata.
+                ='{% endif %}'
         .section-row.no-padding-top
             .container
-                .row
-                    +component('account')
+                +component('account')
 +endsection()

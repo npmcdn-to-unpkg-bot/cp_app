@@ -5,17 +5,17 @@
 columns:
     full_name:
         label: Nome
-        relation: owner
+        relation: user
         select: concat(name, ' ', surname)
 
     company:
         label: Azienda
-        relation: owner
+        relation: user
         select: iu_company
 
     position:
         label: Posizione
-        relation: owner
+        relation: user
         select: iu_position
 
     note:

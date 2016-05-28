@@ -10,8 +10,11 @@ class SeedSetupAdmin extends Seeder
     public static $email = 'admin@domain.tld';
     public static $login = 'admin';
     public static $password = 'admin';
-    public static $firstName = 'Admin';
-    public static $lastName = 'Person';
+    public static $firstName = 'Alessandro';
+    public static $lastName = 'Traversi';
+    public static $company = 'Atemporale';
+    public static $profession = 'Webdesigner';
+    public static $tag_name = 'Ale-Atemporale';
 
     public function setDefaults($values)
     {
@@ -39,6 +42,9 @@ class SeedSetupAdmin extends Seeder
             'password_confirmation' => static::$password,
             'first_name'            => static::$firstName,
             'last_name'             => static::$lastName,
+            'company'               => static::$company,
+            'profession'            => static::$profession,
+            'tag_name'              => static::$tag_name,
             'permissions'           => [],
             'is_superuser'         => true,
             'is_activated'          => true
