@@ -7,6 +7,8 @@
     - create_notes_table.php
     - create_costs_table.php
     - create_invoices_table.php
+    - create_files_table.php
+    - create_reports_table.php
     - create_opportunities_table.php
     - create_statuses_table.php
 1.0.3:

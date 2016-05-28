@@ -26,6 +26,8 @@ class Opportunity extends Model
         'collaborators' => ['Acme\Crm\Models\Collaborator'],
         'services' => ['Acme\Crm\Models\Service'],
         'costs' => ['Acme\Crm\Models\Cost'],
+        'reports' => ['Acme\Crm\Models\Report'],
+        'files' => ['Acme\Crm\Models\File'],
         'invoices' => ['Acme\Crm\Models\Invoice'],
         'contacts' => ['Acme\Crm\Models\Contact'],
     ];

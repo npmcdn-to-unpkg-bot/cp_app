@@ -29,6 +29,9 @@ columns:
     status:
         label: Status del progetto
 
+    completion:
+        label: Completamento in %
+
     owner:
         label: Referente
         relation: owner

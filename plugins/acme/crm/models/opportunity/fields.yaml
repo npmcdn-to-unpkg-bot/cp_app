@@ -79,3 +79,15 @@ tabs:
             type: partial
             path: field_invoices
             tab: Pagamenti
+
+        files:
+            label: Documenti
+            type: partial
+            path: field_files
+            tab: Documenti
+
+        reports:
+            label: Reports risultati
+            type: partial
+            path: field_reports
+            tab: Reports

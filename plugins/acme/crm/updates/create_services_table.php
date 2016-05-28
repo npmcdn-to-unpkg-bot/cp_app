@@ -14,6 +14,7 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->text('annotations')->nullable();
             $table->string('status')->nullable();
+            $table->integer('completion')->nullable();
             $table->integer('opportunity_id')->unsigned()->nullable()->index();
             $table->integer('service_id')->unsigned()->nullable()->index();
             $table->integer('owner_id')->unsigned()->nullable()->index();

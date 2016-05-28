@@ -64,7 +64,7 @@ class Plugin extends PluginBase
     {
         return [
             'user' => [
-                'label'       => 'rainlab.user::lang.users.menu_label',
+                'label'       => 'Client',
                 'url'         => Backend::url('rainlab/user/users'),
                 'icon'        => 'icon-user',
                 'permissions' => ['rainlab.users.*'],

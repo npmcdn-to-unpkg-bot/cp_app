@@ -21,6 +21,11 @@ fields:
         span: auto
         type: dropdown
 
+    completion:
+        label: % di completamento
+        span: auto
+        type: number
+
     owner:
         label: Nome referente
         type: relation

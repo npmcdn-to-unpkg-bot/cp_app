@@ -7,25 +7,21 @@
         <div class="sidebar-block">
             <h4 class="sidebar-title">Documenti</h4>
             <ul>
-                <li><a href="#">Contratto firmato</a></li>
-                <li><a href="#">Proposte di logo</a></li>
-                <li><a href="#">Esecutivo del logo</a></li>
-                <li><a href="#">Esecutivi immagine coordinata</a></li>
+                {% for file in user.opportunity.opportunity.files %}
+                    <li>
+                        <a href="{{ file.path }}{{ file.name }}.{{ file.extention }}">
+                            {{ file.title }}
+                        </a>
+                    </li>
+                {% endfor %}
             </ul>
-        </div>
-        <div class="sidebar-block">
-            <h4 class="sidebar-title">Come contattarci</h4>
-            info@atemporale.it<br />
-            info@atemporale.it<br />
-            info@atemporale.it<br />
-            info@atemporale.it
         </div>
     </aside>
     <div class="col-md-9">
         <div class="tab-widget">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#home" data-toggle="tab">Messaggi importanti</a></li>
-                <li class=""><a href="#profile" data-toggle="tab">Strategia acquistata</a></li>
+                <li class=""><a href="#profile" data-toggle="tab">Servizi acquistati</a></li>
                 <li class=""><a href="#social" data-toggle="tab">Pagamenti</a></li>
                 <li class=""><a href="#contatti" data-toggle="tab">Report risultati</a></li>
                 <li class=""><a href="#settings" data-toggle="tab">Account personale</a></li>
@@ -42,7 +38,22 @@
                     {% endfor %}
                 </div>
                 <div class="tab-pane fade" id="profile">
-                    <p class="lead">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                    {% for service in user.opportunity.opportunity.services %}
+                        <div class="call-to-action ">
+                            <div class="call-to-action-inner">
+                                <div class="col-text">
+                                    <h3 class="headline">{{ service.service.name }}</h3>
+                                    <p>{{ service.service.desription }}</p>
+                                </div><br />
+                                <div class="progress-counter">
+                                    <span class="progress-label text-center">Status del progetto: {{ service.status }}</span>
+                                    <div class="progress progress-striped active" data-value="{{ service.completion }}">
+                                        <div class="progress-bar progress-bar-success"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
                 <div class="tab-pane fade" id="social">
                     <table class="table table-striped">
@@ -75,9 +86,22 @@
                     </table>
                 </div>
                 <div class="tab-pane fade" id="contatti">
-                    <p class="lead">Coming soon...</p>
+                    {% for report in user.opportunity.opportunity.reports %}
+                    <div class="lead">
+                        {{ report.name }}<br />
+                        {{ report.description }}<br />
+                        {{ report.starting }}<br />
+                        {{ report.finishing }}<br />
+                        {{ report.investment }}<br />
+                        {{ report.profit }}<br />
+                    </div>
+                    {% endfor %}
                 </div>
                 <div class="tab-pane fade" id="settings">
+                    <br /><br /><br /><br />
+                    <p>Per favore <span class="label label-warning">verifica che i valori</span> inseriti negli appositi campi <span class="label label-warning">siano corretti e/o aggiornati</span>! Questo ci aiuterà a velocizzare il nostro flusso di lavoro.
+                    </p>
+                    <br /><br /><br /><br />
                     {{ form_ajax('onUpdate', { model: user }) }}
                     <fieldset class="row col-md-12">
                         <legend>Account:</legend>

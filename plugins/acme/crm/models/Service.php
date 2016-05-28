@@ -38,17 +38,16 @@ class Service extends Model
     public function getStatusOptions($keyValue = null)
     {
         return [
-            'Inizio: 0%' => 'Inizio: 0%',
-            'Briefing: 5%' => 'Briefing: 5%',
-            'Analisi di mercato: 15%' => 'Analisi di mercato: 15%',
-            'Definizione degli obiettivi: 20%' => 'Definizione degli obiettivi: 20%',
-            'Concettualizzazione: 25%' => 'Concettualizzazione: 25%',
-            'Metaprogettazione: 30%' => 'Metaprogettazione: 30%',
-            'Sviluppo del progetto: 40%' => 'Sviluppo del progetto: 40%',
-            'Testing: 65%' => 'Testing: 65%',
-            'Realizzazione di esecutivi: 75%' => 'Realizzazione di esecutivi: 75%',
-            'Testing: 95%' =>'Testing: 95%',
-            'Consegna: 100%' =>'Consegna: 100%',
+            'Inizio' => 'Inizio',
+            'Briefing' => 'Briefing',
+            'Analisi di mercato' => 'Analisi di mercato',
+            'Definizione degli obiettivi' => 'Definizione degli obiettivi',
+            'Concettualizzazione' => 'Concettualizzazione',
+            'Metaprogettazione' => 'Metaprogettazione',
+            'Sviluppo del progetto' => 'Sviluppo del progetto',
+            'Testing' => 'Testing',
+            'Realizzazione di esecutivi' => 'Realizzazione di esecutivi',
+            'Consegna' =>'Consegna',
         ];
     }
 

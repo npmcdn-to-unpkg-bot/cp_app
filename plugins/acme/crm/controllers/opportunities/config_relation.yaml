@@ -59,3 +59,19 @@ invoices:
     manage:
         form: $/acme/crm/models/invoice/fields.yaml
 
+files:
+    label: Documenti
+    view:
+        list: $/acme/crm/models/file/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/acme/crm/models/file/fields.yaml
+
+reports:
+    label: Reports
+    view:
+        list: $/acme/crm/models/report/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/acme/crm/models/report/fields.yaml
+
