@@ -1,7 +1,7 @@
 <div class="row">
     <aside class="sidebar col-md-3">
         <div class="sidebar-block">
-            <h4 class="sidebar-title">Briefing {{ user.opportunity.opportunity.name }}</h4>
+            <h4 class="sidebar-title">Briefing</h4>
             <p>{{ user.opportunity.opportunity.description|raw }}</p>
         </div>
         <div class="sidebar-block">
@@ -17,7 +17,7 @@
             </ul>
         </div>
     </aside>
-    <div class="col-md-9">
+    <div class="col-md-8 col-md-offset-1">
         <div class="tab-widget">
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#home" data-toggle="tab">Messaggi importanti</a></li>
@@ -43,7 +43,7 @@
                             <div class="call-to-action-inner">
                                 <div class="col-text">
                                     <h3 class="headline">{{ service.service.name }}</h3>
-                                    <p>{{ service.service.desription }}</p>
+                                    <p class="text-justify"><br />{{ service.annotations }}<br/></p>
                                 </div><br />
                                 <div class="progress-counter">
                                     <span class="progress-label text-center">Status del progetto: {{ service.status }}</span>
@@ -87,14 +87,19 @@
                 </div>
                 <div class="tab-pane fade" id="contatti">
                     {% for report in user.opportunity.opportunity.reports %}
-                    <div class="lead">
-                        {{ report.name }}<br />
-                        {{ report.description }}<br />
-                        {{ report.starting }}<br />
-                        {{ report.finishing }}<br />
-                        {{ report.investment }}<br />
-                        {{ report.profit }}<br />
-                    </div>
+                        <div class="post-content section-row no-padding-top col-md-12">
+                            <div class="post-header row">
+                                <div class="post-date info">
+                                    Start on {{ report.starting }} and finish on {{ report.finishing }}. Invetment: {{ report.investment }}R$ - Profit: {{ report.profit }}R$
+                                </div>
+                                <h3 class="post-title">
+                                    {{ report.name }}
+                                </h3>
+                            </div>
+                            <div class="row post-body">
+                                 {{ report.description|raw }}
+                            </div>
+                        </div>
                     {% endfor %}
                 </div>
                 <div class="tab-pane fade" id="settings">
