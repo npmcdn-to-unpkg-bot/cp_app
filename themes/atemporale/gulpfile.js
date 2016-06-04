@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
+    cache = require('gulp-cached'),
     livereload = require('gulp-livereload'),
     bower = require('gulp-bower'),
     less = require('gulp-less'),
@@ -20,8 +20,7 @@ var bowerDir  = 'assets/vendor',
     lessDir   = 'assets/less',
     jadeDir   = 'assets/jade',
     publicCSS = 'assets/css',
-    publicJS  = 'assets/js',
-    publicIMG = 'assets/images';
+    publicJS  = 'assets/js';
 
 
 /*
@@ -46,19 +45,12 @@ gulp.task('bower', function() {
  | Clear cache task
  |--------------------------------------------------------------------------
  */
-gulp.task('clearcache', function (done) {
-    return cache.clearAll(done);
+gulp.task('clearcache', function () {
+    return cache.caches = {};
 });
 
 
-/*
- |--------------------------------------------------------------------------
- | All Jade task
- |--------------------------------------------------------------------------
- */
-gulp.task('jade', function() {
-    return gulp.start('layouts', 'pages', 'partials', 'contents');
-});
+
 
 /*
  |--------------------------------------------------------------------------
@@ -74,7 +66,7 @@ gulp.task('contents', function() {
             pretty:true
         }))
         .pipe(rename({ extname: ".htm" }))
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('content/'))
         .pipe(notify({ message: 'Jade contents compiled' }));
 });
 
@@ -92,7 +84,7 @@ gulp.task('layouts', function() {
             pretty:true
         }))
         .pipe(rename({ extname: ".htm" }))
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('layouts/'))
         .pipe(notify({ message: 'Jade layouts compiled' }));
 });
 
@@ -110,7 +102,7 @@ gulp.task('pages', function() {
             pretty:true
         }))
         .pipe(rename({ extname: ".htm" }))
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('pages/'))
         .pipe(notify({ message: 'Jade pages compiled' }));
 });
 
@@ -128,7 +120,7 @@ gulp.task('partials', function() {
             pretty:true
         }))
         .pipe(rename({ extname: ".htm" }))
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('partials/'))
         .pipe(notify({ message: 'Jade partials compiled' }));
 });
 
@@ -182,7 +174,7 @@ gulp.task('clean', function() {
  | Default task
  |--------------------------------------------------------------------------
  */
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['clearcache','clean'], function() {
     gulp.start('less', 'scripts', 'jade');
 });
 
@@ -201,12 +193,30 @@ gulp.task('watch', function() {
     gulp.watch(lessDir+'/**/*.less', ['less']);
 
     // Watch .js files
-    gulp.watch(publicJS+'/dev', ['scripts']);
+    gulp.watch(publicJS+'/dev/**/*.js', ['scripts']);
 
     // Create LiveReload server
     livereload.listen();
 
     // Watch any files in dist/, reload on change
-    gulp.watch([publicCSS,publicJS+'/prod/*',publicIMG+'/prod/*', jadeDir+'**/*.jade']).on('change', livereload.changed);
+    gulp.watch([publicCSS,publicJS+'/prod/*', jadeDir+'**/*.jade']).on('change', livereload.changed);
 
+});
+
+/*
+ |--------------------------------------------------------------------------
+ | All Jade task
+ |--------------------------------------------------------------------------
+ */
+gulp.task('jade', function() {
+    return gulp.src(jadeDir+'/**/*.jade')
+        .pipe(cache('linting'))
+        .pipe(jade({
+            client: false,
+            doctype: 'htm',
+            pretty:true
+        }))
+        .pipe(rename({ extname: ".htm" }))
+        .pipe(gulp.dest(''))
+        .pipe(notify({ message: 'Jade compiled' }));
 });
