@@ -15,9 +15,11 @@ var gulp = require('gulp'),
     path = require('path'),
     del = require('del');
 
+livereload({ start: true });
+
 // System var path
 var bowerDir  = 'assets/vendor',
-    lessDir   = 'assets/less',
+    lessDir   = 'assets/less/pages',
     jadeDir   = 'assets/jade',
     publicCSS = 'assets/css',
     publicJS  = 'assets/js';
