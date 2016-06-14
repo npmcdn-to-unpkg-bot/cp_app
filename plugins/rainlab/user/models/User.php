@@ -49,7 +49,30 @@ class User extends UserBase
         'username',
         'email',
         'password',
-        'password_confirmation'
+        'password_confirmation',
+        'gender',
+        'telephone',
+        'job',
+        'company',
+        'about',
+        'webpage',
+        'blog',
+        'facebook',
+        'twitter',
+        'skype',
+        'linkedin',
+        'comment',
+        'mobile',
+        'fax',
+        'cpf',
+        'cnpj',
+        'position',
+        'country',
+        'state',
+        'city',
+        'address',
+        'zipcode',
+        'tag_name'
     ];
 
     /**
