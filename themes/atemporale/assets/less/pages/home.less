@@ -1,8 +1,6 @@
 //richiamo i file less per ereditare le funzioni, ma senza stamparli
 //
 // * * * * * *
-@import (reference) "../../vendor/atemporaleNEXTbower/less/grid_system12.less";
-@import (reference) "../../vendor/atemporaleNEXTbower/less/material_design_color_palette.less";
 @import (reference) "../../vendor/atemporaleNEXTbower/less/mixin_css3.less";
 @import (reference) "../../vendor/atemporaleNEXTbower/less/mixin_posizione.less";
 @import (reference) "../../vendor/atemporaleNEXTbower/less/mixin_testo.less";
@@ -39,3 +37,32 @@
 @import "../components/media-queries.less";
 @import "../components/animations.less";
 
+// stampo le formattazioni dei nuovi elementi della pagina
+//
+// * * * * * * generale
+.padding-top-10{padding-top: 10px}
+.padding-top-20{padding-top: 20px}
+.padding-top-50{padding-top: 50px}
+.padding-top-100{padding-top: 100px}
+
+.padding-bottom-10{padding-bottom: 10px}
+.padding-bottom-20{padding-bottom: 20px}
+.padding-bottom-50{padding-bottom: 50px}
+.padding-bottom-100{padding-bottom: 100px}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.testimonial-slider{
+  .testimonial{
+    blockquote{
+      color:#fff !important;
+      cite{
+        color:#803588;
+      }
+    }
+  }
+}
